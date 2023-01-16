@@ -1,12 +1,7 @@
 # Focalboard
 
-Runs Focalboard in a local Docker container. To run:
+Includes Watchtower to autoupddate Focalboard.
 
-    chmod +x focalboard.sh
-    ./focalboard.sh
+To run: 
 
-You can specify a port if desired. By default it will bind to 80.
-    
-    ./focalboard 8081
-
-Documentation from [FocalBoard](https://www.focalboard.com/download/personal-edition/docker/)
+    docker-compose up

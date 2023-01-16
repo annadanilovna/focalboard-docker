@@ -1,0 +1,26 @@
+version: '3.3'
+services:
+    focalboard:
+        restart: unless-stopped
+        ports:
+            - '8081:8000'
+        labels:
+            - "com.centurylinklabs.watchtower.enable=true"
+        image: 'mattermost/focalboard:latest'
+
+    # Watchtower will auto update when it sees a new release
+    watchtower:
+        image: containrrr/watchtower
+        restart: always
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - /etc/timezone:/etc/timezone:ro
+        environment:
+            - WATCHTOWER_CLEANUP=true
+            - WATCHTOWER_LABEL_ENABLE=true
+            - WATCHTOWER_INCLUDE_RESTARTING=true
+        labels:
+            - "com.centurylinklabs.watchtower.enable=true"
+
+volumes:
+    UserData:
