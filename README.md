@@ -9,6 +9,6 @@ To run:
 By default, it will listen on 8081, but this may be changed 
 as desired.
 
-The `focalbord.sh` script may be used too. It was the first
+The `focalboard.sh` script may be used too. It was the first
 version of this setup and includes a parameter to specify 
 the port. 
