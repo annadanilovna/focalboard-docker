@@ -21,6 +21,3 @@ services:
             - WATCHTOWER_INCLUDE_RESTARTING=true
         labels:
             - "com.centurylinklabs.watchtower.enable=true"
-
-volumes:
-    UserData:
